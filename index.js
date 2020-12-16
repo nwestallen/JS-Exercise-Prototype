@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /*
   EXAMPLE TASK:
     - Write an Airplane constructor that initializes `name` from an argument.
@@ -84,6 +85,18 @@ function Airplane(name) {
 
   Car.prototype.fill = function(gallons) {
     this.tank += gallons;
+  }
+
+  Car.prototype.drive = function(distance) {
+    let maxDistance = this.milesPerGallon * this.tank;
+    if(distance >= maxDistance) {
+      this.odometer += maxDistance
+      this.tank = 0;
+      return `I ran out of fuel at ${this.odometer} miles!`
+    } else {
+      this.odometer += distance;
+      this.tank -= distance / this.milesPerGallon;
+    }
   }
   
   
