@@ -108,10 +108,10 @@ function Airplane(name) {
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. 
-    2. 
-    3. 
-    4. 
+    1. The window/console is the default context/object to which 'this' refers
+    2. 'this' binds implicitly to objects that precede function calls when dot notation is used
+    3. 'this' in constructor functions binds to new objects that function creates
+    4. .call and .apply can be used to explicity bind this to specified objects
   */
   
   
